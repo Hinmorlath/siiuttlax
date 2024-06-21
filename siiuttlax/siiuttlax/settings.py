@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'apps.home.apps.HomeConfig',
+
     'apps.careers.apps.CareersConfig',
+
+
+    'apps.academy.apps.AcademyConfig',
 
 ]
 
