@@ -16,4 +16,11 @@
   </ul>
 
   <p>Colaboración con maquina de fuego</p>
+
+  <h2>Bienvenido {{user}} </h2>
+
+  <form action="{%  url 'logout' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Enviar">
+  </form>
 {% endblock %}
