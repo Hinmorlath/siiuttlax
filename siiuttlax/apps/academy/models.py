@@ -1,15 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
+# Create your models here
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    short_name = models.CharField(max_length=15)
+    description = models.TextField()
+
 class Professor(User):
-    employee_number = models.IntegerField(verbose_name='Número de Empleado')
+    employee_number = models.CharField(max_length=4)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)
 
 class Student(User):
-    enrollment = models.CharField(max_length=12, verbose_name='Matrícula')
-
-
-class Principal(User):
-    nickname = models.CharField(max_length=50, verbose_name='Apodo')
-
-   
+    enrollment = models.CharField(max_length=12)
