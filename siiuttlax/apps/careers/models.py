@@ -5,20 +5,19 @@ class careers(models.Model):
         ('TSU', 'Tecnico Superior Universitario'),
         ('Ing', 'Ingenieria'),
         ('Lic', 'Licenciatura'),
+        ('M', 'Maestria')
     ]
 
-    STATUS_CHOICES = [
-        ('active', 'Active'),
-        ('inactive', 'Inactive'),
-    ]
-
-    name = models.CharField(max_length=200)
-    level = models.CharField(max_length=20, choices=LEVEL_CHOICES)
+    name = models.CharField(max_length=100)
     short_name = models.CharField(max_length=50)
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES)
-    plan = models.TextField()
-    director = models.CharField(max_length=200)
+    level = models.CharField(max_length=20, choices=LEVEL_CHOICES)
+    year_plan = models.CharField(max_length=10)
+    status = models.BooleanField(default=True)
 
-    def __str__(self):
-        return self.name
-    
+class Subject(models.Model):
+    name = models.CharField(max_length=100)
+    career = models.ForeignKey(careers, on_delete=models.CASCADE)
+    semester = models.IntegerField()
+    total_horas = models.IntegerField()
+    weekly_hours = models.IntegerField()
+    file = models.CharField(max_length=100)
