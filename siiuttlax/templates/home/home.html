@@ -6,14 +6,10 @@
   <h1>Sistema Integral de Información</h1>
   <h2>SIIUTTlax</h2>
 
-  <h2>Lo que sea</h2>
+  <h2>Bienvenido {{user}} </h2>
 
-
-  <ul>
-    <li>Linea 1</li>
-    <li>Linea 2</li>
-    <li>Linea 3</li>
-  </ul>
-
-  <p>Colaboración con maquina de fuego</p>
+  <form action="{%  url 'logout' %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Enviar">
+  </form>
 {% endblock %}
