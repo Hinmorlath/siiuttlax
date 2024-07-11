@@ -7,7 +7,7 @@
   <h2>SIIUTTlax</h2>
   <h2>Bienvenido {{user}} </h2>
 
-  <form action="{%  url 'logout' %}" method="post">
+  <form action="{%  url 'logout' %}" method="post" class="logout">
     {% csrf_token %}
     <input type="submit" value="Enviar">
   </form>
