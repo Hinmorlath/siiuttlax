@@ -9,8 +9,8 @@ class Category(models.Model):
 
 class Professor(User):
     employee_number = models.CharField(max_length=4)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    title = models.CharField(max_length=100)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    title = models.CharField(max_length=100, null=True)
 
 class Student(User):
     enrollment = models.CharField(max_length=12)
