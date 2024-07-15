@@ -34,7 +34,6 @@ class Career(models.Model):
         verbose_name = 'carrera'
         verbose_name_plural = 'carreras'
 
-
 class Subject(models.Model):
     name = models.CharField(verbose_name='Nombre', max_length=200)
     career = models.ForeignKey(Career, on_delete=models.CASCADE, verbose_name='Carrera')
