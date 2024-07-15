@@ -34,14 +34,14 @@ class Career(models.Model):
         verbose_name = 'carrera'
         verbose_name_plural = 'carreras'
 
-<<<<<<< HEAD
+
     name = models.CharField(max_length=100)
     short_name = models.CharField(max_length=50)
     level = models.CharField(max_length=20, choices=LEVEL_CHOICES)
     year_plan = models.CharField(max_length=10, null=True)
     status = models.BooleanField(default=True)
-=======
->>>>>>> develop
+
+
 
 class Subject(models.Model):
     name = models.CharField(verbose_name='Nombre', max_length=200)

@@ -1,2 +1,1 @@
 [{"model": "careers.careers", "pk": 1, "fields": {"name": "TIADS", "level": "TSU", "short_name": "TIADSM", "status": "active", "plan": "2018", "director": "cualquiera"}}, {"model": "careers.careers", "pk": 2, "fields": {"name": "Redes", "level": "TSU", "short_name": "TIAIRD", "status": "active", "plan": "2018", "director": "cualquiera"}}, {"model": "careers.careers", "pk": 3, "fields": {"name": "Entorno", "level": "TSU", "short_name": "TIAEVND", "status": "active", "plan": "2018", "director": "cualquiera2"}}]
- 
