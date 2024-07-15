@@ -1,0 +1,65 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+body {
+    background: url("./../img/fondo.jpg");
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.formLG{
+    border-radius: 1em;
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    border: 2px solid #fff;
+    padding: 1em 2em;
+    backdrop-filter: blur(10px);
+    max-width: 350px;
+}
+h1 {
+    font-size: 2em;
+    justify-content: center;
+    display: flex;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+}
+.login label{
+    font-size: 0.9em
+}
+.login input{
+    display: block;
+    width: 100%;
+    margin: 0.5em 0;
+    padding: 0.8em 1em;
+    border-radius: 2em;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: none;
+    font-weight: bold;
+    outline: none;
+}
+.login input[type="submit"]{
+    background: #fff;
+    color: #000;
+    border: none;
+    margin-top: 2em;
+}
+
+.login input[type="submit"]:hover{
+    background: #000;
+    color: #fff;
+    border: none;
+    margin-top: 2em;
+}
