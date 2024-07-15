@@ -2,9 +2,9 @@ from django.db import models
 
 class Period(models.Model):
     PERIODS = [
-        ('enero - abril', 'enero - abri'),
-        ('mayo - agosto', 'mayo - agosto'),
-        ('septiembre - diciembre', 'septiembre - diciembre')
+        ('Ene-Abr', 'enero - abri'),
+        ('May-Ago', 'mayo - agosto'),
+        ('Sep-Dic', 'septiembre - diciembre')
     ]
     period = models.CharField(max_length=10, choices=PERIODS, verbose_name='Periodo')
     year = models.IntegerField(verbose_name='Año', default=2024)
