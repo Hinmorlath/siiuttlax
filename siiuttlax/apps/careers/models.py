@@ -37,7 +37,7 @@ class Career(models.Model):
 
     name = models.CharField(max_length=100)
     short_name = models.CharField(max_length=50)
-    level = models.CharField(max_length=20, choices=LEVEL_CHOICES)
+    level = models.CharField(max_length=20, choices=LEVELS)
     year_plan = models.CharField(max_length=10, null=True)
     status = models.BooleanField(default=True)
 
