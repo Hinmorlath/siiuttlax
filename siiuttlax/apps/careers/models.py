@@ -2,6 +2,7 @@ from django.db import models
 from apps.period.models import Semester
 
 
+
 class Career(models.Model):
     LEVELS = [
         ('TSU', 'Técnico Superior Universitario'),
