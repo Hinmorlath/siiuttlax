@@ -1,11 +1,15 @@
 from django.contrib import admin
 
-# Register your models here.
-from django.contrib import admin
-from .models import careers
+from .models import Career
+from .models import Subject
 
-#@admin.register(careers)
-#class careersAdmin(admin.ModelAdmin):
-    #list_display = ('name', 'level', 'short_name', 'status', 'director')
-    #search_fields = ('name', 'short_name', 'director')
-    #list_filter = ('level', 'status')
+# Register your models here.
+@admin.register(Career)
+class CareerAdmin(admin.ModelAdmin):
+    list_display = ['short_name', 'level', 'name']
+    ordering = ['level', 'short_name']
+
+@admin.register(Subject)
+class SubjectAdmin(admin.ModelAdmin):
+    list_display = ['name', 'career', 'semester']
+    list_filter = ['career', 'semester']
