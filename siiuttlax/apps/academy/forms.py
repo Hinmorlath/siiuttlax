@@ -6,7 +6,7 @@ class ProfessorForm(forms.ModelForm):
 
     class Meta:
         model = Professor
-        fields = ('username', 'password', 'firs_name', 'employee_number')
+        fields = ['username', 'password', 'first_name', 'employee_number', 'category']
         widgets = {
             'password': forms.PasswordInput(),
             'employee_number': forms.NumberInput(),
@@ -15,7 +15,7 @@ class ProfessorForm(forms.ModelForm):
 class StudentForm(forms.ModelForm):
     class Meta: 
         model = Student
-        fields = ('username', 'password', 'first_name', 'enrollment')
+        fields = ['username', 'password', 'first_name', 'enrollment']
         widgets = {
             'password': forms.PasswordInput(),
         }
