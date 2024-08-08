@@ -14,3 +14,4 @@ class Professor(User):
 
 class Student(User):
     enrollment = models.CharField(max_length=12)
+    
