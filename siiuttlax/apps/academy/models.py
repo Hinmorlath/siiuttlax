@@ -18,7 +18,7 @@ class Professor(User):
         verbose_name_plural = 'Profesores'
 
 class Student(User):
-    enrollment = models.CharField(max_length=12)
+    enrollment = models.CharField(max_length=12, verbose_name='Matricula')
     class Meta:
         verbose_name = 'Estudiante'
         verbose_name_plural = 'Estudiantes'
