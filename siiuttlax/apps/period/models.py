@@ -11,7 +11,7 @@ class Period(models.Model):
     cicle = models.CharField(max_length=10, default='2023 - 2024', verbose_name='Ciclo')
     is_active = models.BooleanField(verbose_name='Activo', default=False)
     
-    def __str__(self):
+    def _str_(self):
         return f'{self.period} {self.year}'
     
     class Meta:
