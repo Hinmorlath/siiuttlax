@@ -1,7 +1,6 @@
 from django.db import models
 from apps.period.models import Semester
 
-
 class Career(models.Model):
     LEVELS = [
         ('TSU', 'Técnico Superior Universitario'),
@@ -35,24 +34,18 @@ class Career(models.Model):
         verbose_name_plural = 'carreras'
 
 
-    name = models.CharField(max_length=100)
-    short_name = models.CharField(max_length=50)
-    level = models.CharField(max_length=20, choices=LEVELS)
-    year_plan = models.CharField(max_length=10, null=True)
-    status = models.BooleanField(default=True)
-
-
-
 class Subject(models.Model):
     name = models.CharField(verbose_name='Nombre', max_length=200)
     career = models.ForeignKey(Career, on_delete=models.CASCADE, verbose_name='Carrera')
     semester = models.ForeignKey(Semester, on_delete=models.CASCADE, verbose_name='Cuatrimestre')
-    teorical_hours = models.IntegerField(verbose_name='Horas teóricas', default=0)
-    practical_hours = models.IntegerField(verbose_name='Horas prácticas', default=0)
+    #teorical_hours = models.IntegerField(verbose_name='Horas teóricas', default=0)
+    #practical_hours = models.IntegerField(verbose_name='Horas prácticas', default=0)
     total_hours = models.IntegerField(verbose_name='Horas totales', default=0)
     semanal_hours = models.IntegerField(verbose_name='Horas semanales', default=0)
-    file = models.CharField(verbose_name='Archivo', max_length=200, blank=True, null=True)
-    file = models.FileField(verbose_name='Archivo', upload_to='subjects')
+    file = models.FileField(
+        verbose_name='Archivo', 
+        blank=True, null=True,
+        upload_to='asignaturas/')
     
 
 

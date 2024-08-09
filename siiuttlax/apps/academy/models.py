@@ -6,12 +6,19 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     short_name = models.CharField(max_length=15)
     description = models.TextField()
+    def __str__(self) -> str:
+        return self.short_name
 
 class Professor(User):
     employee_number = models.CharField(max_length=4)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=100, null=True)
+    class Meta:
+        verbose_name = 'Profesor'
+        verbose_name_plural = 'Profesores'
 
 class Student(User):
     enrollment = models.CharField(max_length=12)
-    
+    class Meta:
+        verbose_name = 'Estudiante'
+        verbose_name_plural = 'Estudiantes'
