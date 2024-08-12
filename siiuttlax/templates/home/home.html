@@ -8,7 +8,7 @@
 
   {% if user.is_authenticated %}
   <h2>Bienvenido {{user}} </h2>
-  <h3>Yo soy {{ type_user }}</h3>
+  <h3>Yo soy {{ type_user }}, tu peor pesadilla</h3>
 
   <form action="{%  url 'logout' %}" method="post" class="logout">
     {% csrf_token %}

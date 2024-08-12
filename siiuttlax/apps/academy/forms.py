@@ -1,4 +1,3 @@
-
 from .models import Professor, Student
 from django.contrib.auth.forms import UserCreationForm
 
