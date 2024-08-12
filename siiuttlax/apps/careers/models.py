@@ -1,7 +1,6 @@
 from django.db import models
 from apps.period.models import Semester
 
-
 class Career(models.Model):
     LEVELS = [
         ('TSU', 'Técnico Superior Universitario'),
@@ -47,7 +46,6 @@ class Subject(models.Model):
         verbose_name='Archivo', 
         blank=True, null=True,
         upload_to='asignaturas/')
-    
     
 
 

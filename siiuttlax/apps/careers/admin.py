@@ -12,4 +12,3 @@ class CareerAdmin(admin.ModelAdmin):
 @admin.register(Subject)
 class SubjectAdmin(admin.ModelAdmin):
     list_display = ['name', 'career', 'semester']
-    list_filter = ['career', 'semester']

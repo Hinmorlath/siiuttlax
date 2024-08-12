@@ -6,10 +6,18 @@
   <h1>Sistema Integral de Información</h1>
   <h2>SIIUTTlax</h2>
 
+  {% if user.is_authenticated %}
   <h2>Bienvenido {{user}} </h2>
+  <h3>Yo soy {{ type_user }}</h3>
 
   <form action="{%  url 'logout' %}" method="post" class="logout">
     {% csrf_token %}
     <input type="submit" value="Enviar">
-  </form>
+  </form> 
+  {% else %}
+  <a href="{% url 'login' %}">Login</a>
+
+  {% endif %}
+
+
 {% endblock %}
