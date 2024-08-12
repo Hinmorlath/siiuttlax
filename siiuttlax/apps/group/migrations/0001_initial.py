@@ -22,6 +22,7 @@ class Migration(migrations.Migration):
                 ('period', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='period.period')),
                 ('semester', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='period.semester')),
                 ('students', models.ManyToManyField(to='academy.student')),
+                ('subjects', models.ManyToManyField(to='careers.subject')),
                 ('tutor', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='academy.professor')),
             ],
         ),
