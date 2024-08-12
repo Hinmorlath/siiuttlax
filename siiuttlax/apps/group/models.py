@@ -2,7 +2,7 @@ from django.db import models
 
 from apps.period.models import Semester, Period
 from apps.academy.models import  Professor, Student
-from apps.careers.models import Career
+from apps.careers.models import Career, Subject
 
 # Create your models here.
 class Group(models.Model):
@@ -11,6 +11,7 @@ class Group(models.Model):
     period = models.ForeignKey(Period, on_delete=models.CASCADE)
     tutor = models.ForeignKey(Professor, on_delete=models.CASCADE)
     students = models.ManyToManyField(Student)
+    subjects = models.ManyToManyField(Subject)
     carrer = models.ForeignKey(Career, on_delete=models.CASCADE)
     
 def __str__(self):
